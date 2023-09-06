@@ -302,20 +302,20 @@
 				</div>
 				<div class='Dropdown_Menu_Options Background_Color_1'>
 					<div class="Dropdown_Menu_Option">
-						<input class="Selection_Controller Top_Half" id="Selection_Controller_Top_1" type="radio" value="Agriculture and Natural Resource Services" />
-						<input class="Selection_Controller Bottom_Half" id="Selection_Controller_Bottom_1" type="radio" value="Agriculture and Natural Resource Services" />
+						<input class="Selection_Controller Top_Half" id="Selection_Controller_Top_1" onclick="Close_Dropdown_Menu ()" type="radio" value="Agriculture and Natural Resource Services" />
+						<input class="Selection_Controller Bottom_Half" id="Selection_Controller_Bottom_1" onclick="Close_Dropdown_Menu ()"  type="radio" value="Agriculture and Natural Resource Services" />
 						<span class='Option_Label' id="Option_Label_1">Agriculture and Natural Resource Services</span>
 						<span class='Option_Value' id="Option_Value_1">Agriculture and Natural Resource Services</span>
 					</div>
 					<div class="Dropdown_Menu_Option">
-						<input class="Selection_Controller Top_Half" id="Selection_Controller_Top_2" type="radio" value="Environmental Services" />
-						<input class="Selection_Controller Bottom_Half" id="Selection_Controller_Bottom_2" type="radio" value="Environmental Services" />
+						<input class="Selection_Controller Top_Half" id="Selection_Controller_Top_2" onclick="Close_Dropdown_Menu ()"  type="radio" value="Environmental Services" />
+						<input class="Selection_Controller Bottom_Half" id="Selection_Controller_Bottom_2" onclick="Close_Dropdown_Menu ()"  type="radio" value="Environmental Services" />
 						<span class='Option_Label' id="Option_Label_2">Environmental Services</span>
 						<span class='Option_Value' id="Option_Value_2">Environmental Services</span>
 					</div>
 					<div class="Dropdown_Menu_Option">
-						<input class="Selection_Controller Top_Half" id="Selection_Controller_Top_3" type="radio" value="Training and Safety Services" />
-						<input class="Selection_Controller Bottom_Half" id="Selection_Controller_Bottom_3" type="radio" value="Training and Safety Services" />
+						<input class="Selection_Controller Top_Half" id="Selection_Controller_Top_3" onclick="Close_Dropdown_Menu ()"  type="radio" value="Training and Safety Services" />
+						<input class="Selection_Controller Bottom_Half" id="Selection_Controller_Bottom_3" onclick="Close_Dropdown_Menu ()"  type="radio" value="Training and Safety Services" />
 						<span class='Option_Label' id="Option_Label_3">Training and Safety Services</span>
 						<span class='Option_Value' id="Option_Value_3">Training and Safety Services</span>
 					</div>

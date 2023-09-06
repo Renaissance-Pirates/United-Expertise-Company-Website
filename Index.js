@@ -360,24 +360,17 @@ const Toggle_Language = async () =>
 
 const Scroll_to_Contact_Us_Section = () => 	window.scrollTo ({ top: document.getElementsByClassName ('Contact_Us_Section') [0].offsetTop, behavior: "smooth" });
 
-document.querySelectorAll ('.Dropdown_Menu_Container').forEach ((Element, Index) =>
+const Close_Dropdown_Menu = () =>
 {
-	Element.on ('click', Event =>
-	{
-		if (Event.target !== Element && document.getElementsByClassName ('Dropdown_Menu_Controller') [Index].checked)
-		{
-			document.getElementsByClassName ('Dropdown_Menu_Controller') [Index].checked = false;
-		}
-	});
-});
+	document.querySelector ('.Dropdown_Menu_Controller').checked = false;
+}
 
-document.querySelectorAll ('.Selection_Controller').forEach (Element =>
+window.onclick (Event =>
 {
-	Element.on ('click', Event =>
+	if (Event.target !== document.querySelector ('.Dropdown_Menu_Controller'))
 	{
-		Event.preventDefault ();
-		document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked = false;
-	});
+		Close_Dropdown_Menu ();
+	}
 });
 
 const Send_Email = async () =>
