@@ -3,8 +3,8 @@
 	<div class="Full_Height_Section Hero_Section">
 		<div class="Hero_Content Padding_2rem Background_Color_1">
 			<div class="Language_Toggle_Switch" onclick="Toggle_Language ()">
-				<div class="Language_Toggle_Switch_Button English_Language Cover_Background" data-bgimage="/assets/images/english-slider.png"></div>
-				<div class="Language_Toggle_Switch_Button Arabic_Language Cover_Background" data-bgimage="/assets/images/arabic-slider.png" style="display: none;"></div>
+				<div class="Language_Toggle_Switch_Button English_Language Cover_Background" data-bgimage="/Images/english-slider.png"></div>
+				<div class="Language_Toggle_Switch_Button Arabic_Language Cover_Background" data-bgimage="/Images/arabic-slider.png" style="display: none;"></div>
 			</div>
 			<svg class="Company_Logo" viewBox="0 0 512 332" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g clip-path="url(#clip0_115_8)">
@@ -118,9 +118,9 @@
 			<h3 class="Hero_Header" id="Hero_Header_2">Join us on a mission to build a cleaner world!</h3>
 			<button class="Standard_Button" id="Call_to_Action_1" onclick="Scroll_to_Contact_Us_Section ()">Get a free quote</button>
 		</div>
-		<div class="Hero_Image Cover_Background" data-bgimage="/assets/images/hero-image.png"></div>
+		<div class="Hero_Image Cover_Background" data-bgimage="/Images/hero-image.png"></div>
 	</div>
-	<div class="Full_Height_Section Cover_Background Flex_Row Flex_Start" data-bgimage="/assets/images/cover-image-1.jpg">
+	<div class="Full_Height_Section Cover_Background Flex_Row Flex_Start" data-bgimage="/Images/cover-image-1.jpg">
 		<div class="Feature_Section Margin_Left_8rem Background_Color_3">
 			<div class="Features_Header Background_Color_2">
 				<svg width="74" height="64" viewBox="0 0 74 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +185,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="Full_Height_Section Cover_Background Flex_Row Flex_End" data-bgimage="/assets/images/cover-image-2.jpg">
+	<div class="Full_Height_Section Cover_Background Flex_Row Flex_End" data-bgimage="/Images/cover-image-2.jpg">
 		<div class="Feature_Section Margin_Right_8rem Background_Color_3">
 			<div class="Features_Header Background_Color_2">
 				<svg width="41" height="64" viewBox="0 0 41 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +206,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="Full_Height_Section Cover_Background Flex_Row Flex_Start" data-bgimage="/assets/images/cover-image-3.jpg">
+	<div class="Full_Height_Section Cover_Background Flex_Row Flex_Start" data-bgimage="/Images/cover-image-3.jpg">
 		<div class="Feature_Section Margin_Left_8rem Background_Color_3">
 			<div class="Features_Header Background_Color_2">
 				<svg width="61" height="64" viewBox="0 0 61 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -238,7 +238,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="Full_Height_Section Cover_Background Flex_Row Flex_End" data-bgimage="/assets/images/cover-image-4.jpg">
+	<div class="Full_Height_Section Cover_Background Flex_Row Flex_End" data-bgimage="/Images/cover-image-4.jpg">
 		<div class="Feature_Section Margin_Right_8rem Background_Color_3">
 			<div class="Features_Header Background_Color_2">
 				<svg width="81" height="64" viewBox="0 0 81 64" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -4,17 +4,17 @@
 	"icons": 
 	[
 		{
-			"src": "./assets/Icons/Favorite_Icon.ico",
+			"src": "./Icons/Favorite_Icon.ico",
 			"sizes": "64x64 32x32 24x24 16x16",
 			"type": "image/x-icon"
 		},
 		{
-			"src": "./assets/Icons/Favorite_Icon_192_Pixels.png",
+			"src": "./Icons/Favorite_Icon_192_Pixels.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "./assets/Icons/Favorite_Icon_512_Pixels.png",
+			"src": "./Icons/Favorite_Icon_512_Pixels.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		}

@@ -320,7 +320,8 @@ const Toggle_Language = async () =>
 		document.querySelectorAll ('.Input_Field').forEach (Input_Label_Element => Input_Label_Element.classList.add ('Arabic_Input'));
 		document.getElementsByClassName ('Dropdown_Menu_Label') [0].classList.add ('Arabic_Dropdown');
 		document.getElementsByClassName ('Dropdown_Menu_Box') [0].style = 'padding-top: 0.075rem !important; padding-bottom: 0.075rem !important;'
-		document.getElementsByClassName ('Blog_Cards') [0].classList.add ('Reverse_Flex_Row')
+		document.getElementsByClassName ('Blog_Cards') [0].classList.add ('Reverse_Flex_Row');
+		document.getElementsByClassName ('Footer') [0].classList.add ('Reverse_Flex_Row');
 	}
 	else if (Language === 'ar')
 	{
@@ -339,11 +340,11 @@ const Toggle_Language = async () =>
 		document.getElementsByClassName ('Dropdown_Menu_Label') [0].classList.remove ('Arabic_Dropdown');
 		document.getElementsByClassName ('Dropdown_Menu_Box') [0].style = ''
 		document.getElementsByClassName ('Blog_Cards') [0].classList.remove ('Reverse_Flex_Row')
+		document.getElementsByClassName ('Footer') [0].classList.remove ('Reverse_Flex_Row');
 	}
 	const Response = await fetch (`${window.location.origin}/wp-json/uec-theme/api/blogs?language=${Language === 'en' ? 'ar' : 'en'}`);
 	const Blogs_HTML = await Response.text ();
 	document.getElementsByClassName ('Blog_Cards') [0].innerHTML = Blogs_HTML;
-	document.getElementsByClassName ('Footer') [0].classList.add ('Reverse_Flex_Row');
 }
 
 const Scroll_to_Contact_Us_Section = () => 	window.scrollTo ({ top: document.getElementsByClassName ('Contact_Us_Section') [0].offsetTop, behavior: "smooth" });
