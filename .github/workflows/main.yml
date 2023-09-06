@@ -1,0 +1,22 @@
+name: Automatic Deployment of the Website to production
+
+on:
+  push:
+    branches:
+      - Production
+
+jobs:
+  web-deploy:
+    name: Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Upload latest changes
+        uses: ./
+        with:
+          server: ftp.uec-env.com.sa
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /
