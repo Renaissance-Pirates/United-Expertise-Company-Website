@@ -17,11 +17,11 @@ get_header ();
 		the_post ();
 		?>
 		<article class="Blog_Container Padding_4rem Background_Color_1">
-			<h1 class="<?php echo $Language == 'Arabic' ? 'Arabic_Header' : '' ?>"><?php the_title (); ?></h1>
-			<div class="<?php echo $Language == 'Arabic' ? 'Arabic_Text' : '' ?>"><?php the_content (); ?></div>
+			<h1 class="<?php echo $Language == 'Arabic' ? 'Arabic_Header Right_Text_Alignment' : '' ?>"><?php the_title (); ?></h1>
+			<div class="<?php echo $Language == 'Arabic' ? 'Arabic_Text Right_Text_Alignment' : '' ?>"><?php the_content (); ?></div>
 		</article>
 		<?php
 	}
 ?>
 
-<?php get_footer(); ?>
+<?php get_footer (); ?>
