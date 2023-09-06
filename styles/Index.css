@@ -325,6 +325,21 @@
 	gap: 2rem
 }
 
+@media screen and (max-width: 480px) 
+{
+	.Footer
+	{
+		padding-left: 2rem !important;
+		padding-right: 2rem !important;
+	}
+}
+
+.Mobile_Footer
+{
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
 /* Dropdown */
 
 .Dropdown_Menu_Controller:checked ~ .Input_Label

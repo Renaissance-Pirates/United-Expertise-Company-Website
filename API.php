@@ -19,16 +19,16 @@ function Send_Email ()
 		$Email = $_POST ['Email'];
 		$Subject = $_POST ['Subject'];
 		$Message = $_POST ['Message'];
-		$To = 'v.shein@uec-env.com.sa';
+		$To = 'info@uec-env.com.sa';
 		$Headers = 'From: '. $Email . '\r\n' . 'Reply-To: ' . $Email . '\r\n';
 		$Sending_Status = wp_mail ($To, $Subject, strip_tags ($Message), $Headers);
 		if ($Sending_Status)
 		{
-			print_r ('We got your message! Our representative will contact you in a few business days.');
+			echo 'We got your message! Our representative will contact you in a few business days.';
 		}
 		else 
 		{
-			print_r ('There was an error sending message');       
+			echo 'There was an error sending message';       
 		}
 	}
 }

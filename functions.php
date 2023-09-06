@@ -2,13 +2,13 @@
 
 function Add_CSS ()
 {
-	wp_register_style ('Fonts', get_template_directory_uri () . '/styles/Fonts.css', false);
+	wp_register_style ('Fonts', get_template_directory_uri () . '/Styles/Fonts.css', false);
 	wp_enqueue_style ('Fonts');
-	wp_register_style ('Global', get_template_directory_uri () . '/styles/Global.min.css', false);
+	wp_register_style ('Global', get_template_directory_uri () . '/Styles/Global.min.css', false);
 	wp_enqueue_style ('Global');
-	wp_register_style ('Index', get_template_directory_uri () . '/styles/Index.min.css', false);
+	wp_register_style ('Index', get_template_directory_uri () . '/Styles/Index.min.css', false);
 	wp_enqueue_style ('Index');
-	wp_register_style ('Utility', get_template_directory_uri () . '/styles/Utility.min.css', false);
+	wp_register_style ('Utility', get_template_directory_uri () . '/Styles/Utility.min.css', false);
 	wp_enqueue_style ('Utility');
 }
 
@@ -75,7 +75,7 @@ function Get_Blogs ($Language_Code)
 			$Language = array_map (fn ($Value): String => $Value -> name, get_the_category ()) [0];
 			if ($Language_Code == 'en' && $Language == 'English')
 			{
-				echo '<a class="Blog_Card Cover_Background Text_Color_2" href="' . get_permalink () . '" rel="prev" data-bgimage="/assets/images/blog-card-' . $Post_Number . '.jpg" target="_blank">';
+				echo '<a class="Blog_Card Cover_Background Text_Color_2" href="' . get_permalink () . '" rel="prev" data-bgimage="/Images/blog-card-' . $Post_Number . '.jpg" target="_blank">';
 					echo '<div class="Blog_Card_Overlay Background_Color_3">';
 						echo '<span></span>';
 						echo '<h3 class="Blog_Title Central_Text_Alignment Text_Color_2" id="Blog_Title_' . $Post_Number .'">' . get_the_title () . '</h3>';
@@ -92,7 +92,7 @@ function Get_Blogs ($Language_Code)
 			}
 			else if ($Language_Code == 'ar' && $Language == 'Arabic')
 			{
-				echo '<a class="Blog_Card Cover_Background Text_Color_2" href="' . get_permalink () . '" rel="prev" data-bgimage="/assets/images/blog-card-' . $Post_Number . '.jpg" target="_blank">';
+				echo '<a class="Blog_Card Cover_Background Text_Color_2" href="' . get_permalink () . '" rel="prev" data-bgimage="/Images/blog-card-' . $Post_Number . '.jpg" target="_blank">';
 					echo '<div class="Blog_Card_Overlay Background_Color_3">';
 						echo '<span></span>';
 						echo '<h3 class="Blog_Title Central_Text_Alignment Text_Color_2 Arabic_Header" id="Blog_Title_' . $Post_Number .'">' . get_the_title () . '</h3>';
