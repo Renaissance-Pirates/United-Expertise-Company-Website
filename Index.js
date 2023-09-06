@@ -326,7 +326,7 @@ const Toggle_Language = async () =>
 		document.getElementsByClassName ('Dropdown_Menu_Arrow_Icon') [0].classList.remove ('Right_1rem');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.add ('Right_Text_Alignment');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.add ('Padding_Right_1rem');
-		document.getElementsByClassName ('Dropdown_Menu_Option'),forEach (Element => Element.classList.add ('Right_Text_Alignment'));
+		document.getElementsByClassName ('Dropdown_Menu_Option').forEach (Element => Element.classList.add ('Right_Text_Alignment'));
 	}
 	else if (Language === 'ar')
 	{
@@ -350,7 +350,7 @@ const Toggle_Language = async () =>
 		document.getElementsByClassName ('Dropdown_Menu_Arrow_Icon') [0].classList.remove ('Left_1rem');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.remove ('Right_Text_Alignment');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.remove ('Padding_Right_1rem');
-		document.getElementsByClassName ('Dropdown_Menu_Option'),forEach (Element => Element.classList.remove ('Right_Text_Alignment'));
+		document.getElementsByClassName ('Dropdown_Menu_Option').forEach (Element => Element.classList.remove ('Right_Text_Alignment'));
 	}
 	const Response = await fetch (`${window.location.origin}/wp-json/uec-theme/api/blogs?language=${Language === 'en' ? 'ar' : 'en'}`);
 	const Blogs_HTML = await Response.text ();
@@ -359,13 +359,24 @@ const Toggle_Language = async () =>
 
 const Scroll_to_Contact_Us_Section = () => 	window.scrollTo ({ top: document.getElementsByClassName ('Contact_Us_Section') [0].offsetTop, behavior: "smooth" });
 
-[...document.getElementsByClassName ('Dropdown_Menu_Container')].forEach ((Element, Index) =>
+document.getElementsByClassName ('Dropdown_Menu_Container').forEach ((Element, Index) =>
 {
 	Element.addEventListener ('click', Event =>
 	{
 		if (Event.target !== Element && document.getElementsByClassName ('Dropdown_Menu_Controller') [Index].checked)
 		{
 			document.getElementsByClassName ('Dropdown_Menu_Controller') [Index].checked = false;
+		}
+	});
+});
+
+document.getElementsByClassName ('Selection_Controller').forEach (Element =>
+{
+	Element.addEventListener ('click', Event =>
+	{
+		if (Event.target !== Element && document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked)
+		{
+			document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked = false;
 		}
 	});
 });
