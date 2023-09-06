@@ -10,11 +10,11 @@ jobs:
     name: Deployment
     runs-on: ubuntu-latest
     steps:
-      - name: Temporary Checkout
+      - name: Temporary checkout
         uses: actions/checkout@v2
 
       - name: Uploading latest changes
-        uses: ./
+        uses: Renaissance-Pirates/United-Expertise-Company-Website
         with:
           server: ftp.uec-env.com.sa
           username: ${{ secrets.FTP_USERNAME }}
