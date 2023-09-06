@@ -326,7 +326,7 @@ const Toggle_Language = async () =>
 		document.getElementsByClassName ('Dropdown_Menu_Arrow_Icon') [0].classList.remove ('Right_1rem');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.add ('Right_Text_Alignment');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.add ('Padding_Right_1rem');
-		document.getElementsByClassName ('Dropdown_Menu_Option').forEach (Element => Element.classList.add ('Right_Text_Alignment'));
+		document.querySelectorAll ('.Dropdown_Menu_Option').forEach (Element => Element.classList.add ('Right_Text_Alignment'));
 	}
 	else if (Language === 'ar')
 	{
@@ -350,7 +350,8 @@ const Toggle_Language = async () =>
 		document.getElementsByClassName ('Dropdown_Menu_Arrow_Icon') [0].classList.remove ('Left_1rem');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.remove ('Right_Text_Alignment');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.remove ('Padding_Right_1rem');
-		document.getElementsByClassName ('Dropdown_Menu_Option').forEach (Element => Element.classList.remove ('Right_Text_Alignment'));
+		document.querySelectorAll ('.Dropdown_Menu_Option').forEach (Element => Element.classList.remove ('Right_Text_Alignment'));
+		
 	}
 	const Response = await fetch (`${window.location.origin}/wp-json/uec-theme/api/blogs?language=${Language === 'en' ? 'ar' : 'en'}`);
 	const Blogs_HTML = await Response.text ();
