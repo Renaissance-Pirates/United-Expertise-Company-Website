@@ -11,10 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Temporary checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          repository: Renaissance-Pirates/United-Expertise-Company-Website
+          path: ./
 
       - name: Uploading latest changes
-        uses: Renaissance-Pirates/United-Expertise-Company-Website
+        uses: ./
         with:
           server: ftp.uec-env.com.sa
           username: ${{ secrets.FTP_USERNAME }}
