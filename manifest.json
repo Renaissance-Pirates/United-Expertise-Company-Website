@@ -1,0 +1,26 @@
+{
+	"short_name": "UEC",
+	"name": "United Expertise Company | Environmental Consultancy Services",
+	"icons": 
+	[
+		{
+			"src": "./assets/Icons/Favorite_Icon.ico",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "./assets/Icons/Favorite_Icon_192_Pixels.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "./assets/Icons/Favorite_Icon_512_Pixels.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "https://uec-env.com.sa",
+	"display": "standalone",
+	"theme_color": "#3367D6",
+	"background_color": "#fbf4e6"
+}

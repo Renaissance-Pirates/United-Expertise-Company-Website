@@ -1,0 +1,26 @@
+@font-face
+{
+	font-family: 'Cairo';
+	src: url('../assets/fonts/Cairo-Regular.woff2') format('woff2'), url('../assets/fonts/Cairo-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face
+{
+	font-family: 'Kufam';
+	src: url('../assets/fonts/Kufam-Italic.woff2') format('woff2'), url('../assets/fonts/Kufam-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face
+{
+	font-family: 'Kufam';
+	src: url('../assets/fonts/Kufam-Regular.woff2') format('woff2'), url('../assets/fonts/Kufam-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
