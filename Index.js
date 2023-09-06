@@ -362,7 +362,7 @@ const Scroll_to_Contact_Us_Section = () => 	window.scrollTo ({ top: document.get
 
 document.querySelectorAll ('.Dropdown_Menu_Container').forEach ((Element, Index) =>
 {
-	Element.addEventListener ('click', Event =>
+	Element.on ('click', Event =>
 	{
 		if (Event.target !== Element && document.getElementsByClassName ('Dropdown_Menu_Controller') [Index].checked)
 		{
@@ -373,12 +373,10 @@ document.querySelectorAll ('.Dropdown_Menu_Container').forEach ((Element, Index)
 
 document.querySelectorAll ('.Selection_Controller').forEach (Element =>
 {
-	Element.addEventListener ('click', Event =>
+	Element.on ('click', Event =>
 	{
-		if (Event.target !== Element && document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked)
-		{
-			document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked = false;
-		}
+		Event.preventDefault ();
+		document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked = false;
 	});
 });
 
