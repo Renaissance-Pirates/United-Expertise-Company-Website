@@ -359,7 +359,7 @@ const Toggle_Language = async () =>
 
 const Scroll_to_Contact_Us_Section = () => 	window.scrollTo ({ top: document.getElementsByClassName ('Contact_Us_Section') [0].offsetTop, behavior: "smooth" });
 
-document.getElementsByClassName ('Dropdown_Menu_Container').forEach ((Element, Index) =>
+document.querySelectorAll ('.Dropdown_Menu_Container').forEach ((Element, Index) =>
 {
 	Element.addEventListener ('click', Event =>
 	{
@@ -370,7 +370,7 @@ document.getElementsByClassName ('Dropdown_Menu_Container').forEach ((Element, I
 	});
 });
 
-document.getElementsByClassName ('Selection_Controller').forEach (Element =>
+document.querySelectorAll ('.Selection_Controller').forEach (Element =>
 {
 	Element.addEventListener ('click', Event =>
 	{
