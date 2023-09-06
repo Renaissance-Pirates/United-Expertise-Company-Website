@@ -375,10 +375,8 @@ document.querySelectorAll ('.Selection_Controller').forEach (Element =>
 {
 	Element.addEventListener ('click', Event =>
 	{
-		if (Event.target !== Element && document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked)
-		{
-			document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked = false;
-		}
+		Event.preventDefault ();
+		document.getElementsByClassName ('Dropdown_Menu_Controller') [0].checked = false;
 	});
 });
 
