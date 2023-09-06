@@ -365,7 +365,7 @@ const Close_Dropdown_Menu = () =>
 	document.querySelector ('.Dropdown_Menu_Controller').checked = false;
 }
 
-window.onclick (Event =>
+window.addEventListener ('click', Event =>
 {
 	if (Event.target !== document.querySelector ('.Dropdown_Menu_Controller'))
 	{
