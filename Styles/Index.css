@@ -334,12 +334,6 @@
 	}
 }
 
-.Mobile_Footer
-{
-	padding-left: 2rem;
-	padding-right: 2rem;
-}
-
 /* Dropdown */
 
 .Dropdown_Menu_Controller:checked ~ .Input_Label
@@ -436,7 +430,6 @@
 	position: absolute;
 	background-color: #000000;
 	top: 1rem;
-	right: 1rem;
 	bottom: 1rem;
 	padding: 1rem;
 	clip-path: path('M23.0179 0.70911L15.2909 8.41928C14.3454 9.36476 12.8146 9.36476 11.8635 8.41928L4.13648 0.70911C3.191 -0.23637 1.65459 -0.23637 0.70911 0.70911C-0.23637 1.65459 -0.23637 3.191 0.70911 4.13648L11.8635 15.2909C12.809 16.2364 14.3454 16.2364 15.2909 15.2909L26.4453 4.13648C27.3908 3.191 27.3908 1.65459 26.4453 0.70911C25.4998 -0.23637 23.9634 -0.23637 23.0179 0.70911Z');
@@ -639,4 +632,9 @@ input[type="radio"]
 .Blog_Container > p:not(:last-of-type)
 {
 	padding-bottom: 1rem;
+}
+
+.Contact_Us_Response
+{
+	display: none;
 }

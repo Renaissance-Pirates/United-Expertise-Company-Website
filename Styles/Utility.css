@@ -11,9 +11,19 @@
 	background-size: cover;
 }
 
+.Left_Text_Alignment
+{
+	text-align: left;
+}
+
 .Central_Text_Alignment
 {
 	text-align: center;
+}
+
+.Right_Text_Alignment
+{
+	text-align: right;
 }
 
 .Text_Color_1

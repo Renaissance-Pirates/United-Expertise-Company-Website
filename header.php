@@ -13,6 +13,7 @@
 		<meta property="og:image" content="https://www.uec-env.com.sa/Icons/Favorite_Icon_512_Pixels.png">
 		<meta property="og:url" content="https://www.uec-env.com.sa">
 		<meta property="og:type" content="website">
+		<meta http-equiv="Cache-control" content="public">
 		<script type="text/javascript">const Theme_URL = "<?php echo get_template_directory_uri (); ?>";</script>
 		<?php wp_head (); ?>
 	</head>

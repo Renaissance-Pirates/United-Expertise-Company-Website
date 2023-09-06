@@ -24,11 +24,11 @@ function Send_Email ()
 		$Sending_Status = wp_mail ($To, $Subject, strip_tags ($Message), $Headers);
 		if ($Sending_Status)
 		{
-			echo 'We got your message! Our representative will contact you in a few business days.';
+			echo json_encode (array ('Status' => 200, 'Message' => 'We got your message! Our representative will contact you in a few business days.'));
 		}
 		else 
 		{
-			echo 'There was an error sending message';       
+			echo json_encode (array ('Status' => 500, 'Message' => 'There was an error sending message'));
 		}
 	}
 }

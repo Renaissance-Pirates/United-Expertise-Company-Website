@@ -322,6 +322,11 @@ const Toggle_Language = async () =>
 		document.getElementsByClassName ('Dropdown_Menu_Box') [0].style = 'padding-top: 0.075rem !important; padding-bottom: 0.075rem !important;'
 		document.getElementsByClassName ('Blog_Cards') [0].classList.add ('Reverse_Flex_Row');
 		document.getElementsByClassName ('Footer') [0].classList.add ('Reverse_Flex_Row');
+		document.getElementsByClassName ('Dropdown_Menu_Arrow_Icon') [0].classList.add ('Left_1rem');
+		document.getElementsByClassName ('Dropdown_Menu_Arrow_Icon') [0].classList.remove ('Right_1rem');
+		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.add ('Right_Text_Alignment');
+		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.add ('Padding_Right_1rem');
+		document.getElementsByClassName ('Dropdown_Menu_Option'),forEach (Element => Element.classList.add ('Right_Text_Alignment'));
 	}
 	else if (Language === 'ar')
 	{
@@ -338,9 +343,14 @@ const Toggle_Language = async () =>
 		document.querySelectorAll ('.Option_Label').forEach (Option_Element => Option_Element.classList.remove ('Arabic_Dropdown'));
 		document.querySelectorAll ('.Input_Field').forEach (Input_Label_Element => Input_Label_Element.classList.remove ('Arabic_Input'));
 		document.getElementsByClassName ('Dropdown_Menu_Label') [0].classList.remove ('Arabic_Dropdown');
-		document.getElementsByClassName ('Dropdown_Menu_Box') [0].style = ''
-		document.getElementsByClassName ('Blog_Cards') [0].classList.remove ('Reverse_Flex_Row')
+		document.getElementsByClassName ('Dropdown_Menu_Box') [0].style = '';
+		document.getElementsByClassName ('Blog_Cards') [0].classList.remove ('Reverse_Flex_Row');
 		document.getElementsByClassName ('Footer') [0].classList.remove ('Reverse_Flex_Row');
+		document.getElementsByClassName ('Dropdown_Menu_Arrow_Icon') [0].classList.add ('Right_1rem');
+		document.getElementsByClassName ('Dropdown_Menu_Arrow_Icon') [0].classList.remove ('Left_1rem');
+		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.remove ('Right_Text_Alignment');
+		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.remove ('Padding_Right_1rem');
+		document.getElementsByClassName ('Dropdown_Menu_Option'),forEach (Element => Element.classList.remove ('Right_Text_Alignment'));
 	}
 	const Response = await fetch (`${window.location.origin}/wp-json/uec-theme/api/blogs?language=${Language === 'en' ? 'ar' : 'en'}`);
 	const Blogs_HTML = await Response.text ();
@@ -369,7 +379,7 @@ const Send_Email = async () =>
 	Request.append ('Subject', `Request for ${document.querySelector ('.Selection_Controller:checked').value}`);
 	Request.append ('Message', document.getElementsByClassName ('Input_Field') [2].value);
 	const Response = await fetch (`${window.location.origin}/wp-admin/admin-ajax.php`, { method: 'POST', body: Request });
-	const Response_Body = await Response.text ();
+	const Response_Body = await Response.json ();
 	console.log (Response);
 	console.log (Response_Body); 
 }
