@@ -16,7 +16,7 @@ jobs:
           repository: Renaissance-Pirates/United-Expertise-Company-Website
           path: ./
       - name: Uploading latest changes
-        uses: SamKirkland/FTP-Deploy-Action@latest
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_ENDPOINT }}
           username: ${{ secrets.FTP_USERNAME }}
