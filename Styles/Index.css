@@ -524,7 +524,7 @@ input[type="radio"]
 {
 	position: absolute;
 	left: 1rem;
-	height: 1.5rem;
+	height: 1.75rem;
 	transform: scale(0);
 }
 
@@ -624,12 +624,12 @@ input[type="radio"]
 	padding-bottom: 2rem;
 }
 
-.Blog_Container > h2
+.Blog_Container > div > h2
 {
 	padding-bottom: 1rem;
 }
 
-.Blog_Container > p:not(:last-of-type)
+.Blog_Container > div > p:not(:last-of-type)
 {
 	padding-bottom: 1rem;
 }
