@@ -523,7 +523,6 @@ input[type="radio"]
 .Option_Value 
 {
 	position: absolute;
-	left: 1rem;
 	height: 1.75rem;
 	transform: scale(0);
 }
