@@ -17,7 +17,7 @@ const Send_Email = async (Language) =>
 		document.getElementById ('Contact_Us_Header').classList.add ('Display_None');
 		document.getElementsByClassName ('Contact_Us_Form') [0].classList.add ('Display_None');
 		document.getElementById ('Call_to_Action_2').classList.add ('Display_None');
-		if ([...document.getElementById ('Email_Icon').classList].includes ('Display_None'))
+		if ([...document.getElementsByClassName ('Email_Icon') [0].classList].includes ('Display_None'))
 		{
 			document.getElementById ('Email_Icon').classList.remove ('Display_None');
 		}
