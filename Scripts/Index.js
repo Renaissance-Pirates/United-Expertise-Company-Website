@@ -294,6 +294,16 @@ const International_Text =
 	{
 		en: 'Privacy Policy',
 		ar: 'سياسة الخصوصية'
+	},
+	Email_Successful_Response:
+	{
+		en: 'We got your message! Our representative will contact you in a few business days.',
+		ar: 'لقد وصلتنا رسالتك! سيتصل بك مندوبنا خلال أيام عمل قليلة'
+	},
+	Email_Erroneous_Response:
+	{
+		en: 'There was an error sending the message',
+		ar: 'حدث خطأ أثناء إرسال الرسالة'
 	}
 }
 
