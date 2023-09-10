@@ -388,7 +388,7 @@ window.addEventListener ('click', Event =>
 	}
 });
 
-window.addEventListener ('touchstart', Event =>
+window.addEventListener ('touchend', Event =>
 {
 	if (Event.target !== document.querySelector ('.Dropdown_Menu_Controller'))
 	{
