@@ -337,8 +337,10 @@ const Toggle_Language = async () =>
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.add ('Right_Text_Alignment');
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.add ('Padding_Right_1rem');
 		document.querySelectorAll ('.Dropdown_Menu_Option').forEach (Element => Element.classList.add ('Right_Text_Alignment'));
-		document.querySelectorAll ('.Option_Value').forEach (Element => Element.classList.add ('Right_1rem'));
+		document.querySelectorAll ('.Option_Value').forEach (Element => Element.classList.add ('Right_1rem', 'Arabic_Option'));
 		document.querySelectorAll ('.Option_Value').forEach (Element => Element.classList.remove ('Left_1rem'));
+		document.getElementsByClassName ('Dropdown_Menu_Container').setAttribute ('style', 'padding-right: 2rem;');
+		document.querySelectorAll ('.Selection_Controller').forEach (Element => Element.value = International_Text [Element.id].ar)
 	}
 	else if (Language === 'ar')
 	{
@@ -364,7 +366,9 @@ const Toggle_Language = async () =>
 		document.getElementsByClassName ('Dropdown_Menu_Selected_Value') [0].classList.remove ('Padding_Right_1rem');
 		document.querySelectorAll ('.Dropdown_Menu_Option').forEach (Element => Element.classList.remove ('Right_Text_Alignment'));
 		document.querySelectorAll ('.Option_Value').forEach (Element => Element.classList.add ('Left_1rem'));
-		document.querySelectorAll ('.Option_Value').forEach (Element => Element.classList.remove ('Right_1rem'));
+		document.querySelectorAll ('.Option_Value').forEach (Element => Element.classList.remove ('Right_1rem', Arabic_Option));
+		document.getElementsByClassName ('Dropdown_Menu_Container').setAttribute ('style', '');
+		document.querySelectorAll ('.Selection_Controller').forEach (Element => Element.value = International_Text [Element.id].en)
 	}
 	Reload_Blogs (Language);
 }

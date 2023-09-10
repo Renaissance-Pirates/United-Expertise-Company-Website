@@ -489,6 +489,13 @@
 	font-size: 0.9125rem;
 }
 
+.Arabic_Option
+{
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .Reverse_Flex_Row
 {
 	display: flex;
