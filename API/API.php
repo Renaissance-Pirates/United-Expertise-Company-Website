@@ -1,7 +1,5 @@
 <?php
 
-include ('wp-load.php');
-
 add_action ('rest_api_init', function () 
 {
 	register_rest_route ('uec-theme/api', 'blogs', array ('methods'  => 'GET', 'callback' => 'Reload_Blogs'));
@@ -48,13 +46,13 @@ function Get_Hijri_Date ()
 
 function Get_Blogs ($Language_Code)
 {	
-    $Query = new WP_Query (array ('post_type' => 'post'));
+	$Query = new WP_Query (array ('post_type' => 'post'));
 	if ($Query -> have_posts ()) 
 	{
 		$Post_Number = 1;
-        while ($Query -> have_posts ())
+		while ($Query -> have_posts ())
 		{
-            $Query -> the_post ();
+			$Query -> the_post ();
 			$Language = array_map (fn ($Value): String => $Value -> name, get_the_category ()) [0];
 			if ($Language_Code == 'en' && $Language == 'English')
 			{
@@ -90,32 +88,40 @@ function Get_Blogs ($Language_Code)
 				'</a>';
 				$Post_Number = $Post_Number + 1;
 			}
-        }
-    }
+		}
+	}
 	else
 	{
 		echo '';
 	}
-    wp_reset_postdata ();
+	wp_reset_postdata ();
 }
 
 function Reload_Blogs ($Request) 
 {
-    $Language_Code = $Request -> get_param ('language');
-    $Blogs_HTML = Get_Blogs ($Language_Code);
+	$Language_Code = $Request -> get_param ('language');
+	$Blogs_HTML = Get_Blogs ($Language_Code);
 }
 
 function Send_Email ($Request)
 {
-	$Request_Body = $Request -> get_body_params ();
+	$Request_Body = $Request -> get_json_params ();
 	$Name = $Request_Body ['Name'];
 	$Email = $Request_Body ['Email'];
 	$Subject = $Request_Body ['Subject'];
 	$Message = $Request_Body ['Message'];
 	$Language = $Request_Body ['Language'];
 	$To = 'info@uec-env.com.sa';
-	$Headers = 'Content-type: text/plain; charset=utf-8\r\n' . 'From: '. $Email . '\r\n' . 'Reply-To: ' . $Email . '\r\n';
-	$Sending_Status = wp_mail ($To, $Subject, strip_tags ($Message), $Headers);
+	$Headers = array ('Content-Type: text/html; charset=UTF-8', 'From: ' . $Name . ' <' . $Email . '>', 'Reply-To: ' . $Email);
+	add_filter ('wp_mail_from', function ($Original_Email) use ($Email)
+	{
+		return $Email;
+	});
+	add_filter ('wp_mail_from_name', function ($Original_Name) use ($Name)
+	{
+		return $Name;
+	});
+	$Sending_Status = wp_mail ($To, $Subject, strip_tags ($Message), implode (PHP_EOL, $Headers));
 	if ($Sending_Status)
 	{
 		return new WP_REST_Response (array ('Status' => 200, 'Message' => $Language == 'ar' ? 'لقد وصلتنا رسالتك! سيتصل بك مندوبنا خلال أيام عمل قليلة' : 'We got your message! Our representative will contact you in a few business days.'));
