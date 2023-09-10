@@ -388,14 +388,6 @@ window.addEventListener ('click', Event =>
 	}
 });
 
-window.addEventListener ('touchend', Event =>
-{
-	if (![...document.querySelectorAll ('.Dropdown_Menu_Option')].includes (Event.target))
-	{
-		Close_Dropdown_Menu ();
-	}
-});
-
 const Launch_Interaction_Observer = () =>
 {
 	if ('IntersectionObserver' in window) 
