@@ -3,7 +3,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, minimum-scale=1">
 		<title><?php bloginfo ('name'); ?></title>
 		<meta name="description" content="United Expertise Company (UEC) provides environmental consulting and studies services to assess environmental damages and offer economic solutions with a focus on environmental safety. Our highly qualified national (Saudi) team has over 30 years of experience.">
 		<meta name="keywords" content="United Expertise Company, UEC, Environmental Consultancy, Environmental Studies, Environmental Services, Environmental Damage Assessment, Environmental Safety, Saudi Arabia">
