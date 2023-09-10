@@ -633,7 +633,14 @@ input[type="radio"]
 	padding-bottom: 1rem;
 }
 
-.Contact_Us_Response
+.Email_Icon
 {
-	display: none;
+	width: 10rem;
+}
+
+#Email_Response
+{
+	text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
 }

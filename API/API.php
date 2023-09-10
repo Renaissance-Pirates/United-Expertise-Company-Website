@@ -124,11 +124,11 @@ function Send_Email ($Request)
 	$Sending_Status = wp_mail ($To, $Subject, strip_tags ($Message), implode (PHP_EOL, $Headers));
 	if ($Sending_Status)
 	{
-		return new WP_REST_Response (array ('Status' => 200, 'Message' => $Language == 'ar' ? 'لقد وصلتنا رسالتك! سيتصل بك مندوبنا خلال أيام عمل قليلة' : 'We got your message! Our representative will contact you in a few business days.'));
+		return new WP_REST_Response (array ('Status' => 201, 'Message' => $Language == 'ar' ? 'لقد وصلتنا رسالتك! سيتصل بك مندوبنا خلال أيام عمل قليلة' : 'We got your message! Our representative will contact you in a few business days.'), 201);
 	}
 	else 
 	{
-		return new WP_REST_Response (array ('Status' => 500, 'Message' => $Language == 'ar' ? 'حدث خطأ أثناء إرسال الرسالة' : 'There was an error sending the message'));
+		return new WP_REST_Response (array ('Status' => 500, 'Message' => $Language == 'ar' ? 'حدث خطأ أثناء إرسال الرسالة' : 'There was an error sending the message'), 500);
 	}
 }
 
