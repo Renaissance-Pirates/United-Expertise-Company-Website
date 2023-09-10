@@ -328,7 +328,7 @@
 			</div>
 		</form>
 		<button class="Standard_Button" id="Call_to_Action_2" onclick="Send_Email (document.documentElement.getAttribute ('lang'))">Send Message</button>
-		<div class="Contact_Us_Response Display_None">
+		<div class="Contact_Us_Response Display_None Padding_Left_2rem Padding_Right_2rem">
 			<svg class="Email_Icon" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 15C10 11.13 13.13 8 17 8C18.08 8 19.09 8.25 20 8.68V2C20 0.9 19.1 0 18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H10.08C10.03 15.67 10 15.34 10 15ZM2 2L10 7L18 2V4L10 9L2 4V2ZM15.34 18L11.8 14.46L13.21 13.05L15.33 15.17L19.57 10.93L21 12.34L15.34 18Z" fill="black"/></svg>
 			<div id="Email_Response"></div>
 		</div>

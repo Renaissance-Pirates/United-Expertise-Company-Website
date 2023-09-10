@@ -633,6 +633,14 @@ input[type="radio"]
 	padding-bottom: 1rem;
 }
 
+.Contact_Us_Response
+{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	gap: 2rem
+}
+
 .Email_Icon
 {
 	width: 10rem;
@@ -641,6 +649,5 @@ input[type="radio"]
 #Email_Response
 {
 	text-align: center;
-    font-size: 2rem;
-    padding-top: 1rem;
+    font-size: 1.5rem;
 }
