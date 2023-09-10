@@ -33,6 +33,8 @@ add_action ('wp_head', 'Add_Manifest_JSON');
 
 require_once (get_template_directory () . '/API/API.php');
 
+/*
+
 function Configure_Email ($PHP_Mailer) 
 {
 	$PHP_Mailer -> isSMTP ();
@@ -46,5 +48,6 @@ function Configure_Email ($PHP_Mailer)
 
 add_action ('phpmailer_init', 'Configure_Email');
 
+*/
 
 ?>
