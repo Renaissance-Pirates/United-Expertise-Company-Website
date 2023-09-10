@@ -355,11 +355,8 @@ const Toggle_Language = async () =>
 		document.querySelectorAll ('.Dropdown_Menu_Option').forEach (Element => Element.classList.remove ('Right_Text_Alignment'));
 		document.querySelectorAll ('.Option_Value').forEach (Element => Element.classList.add ('Left_1rem'));
 		document.querySelectorAll ('.Option_Value').forEach (Element => Element.classList.remove ('Right_1rem'));
-		
 	}
-	const Response = await fetch (`${window.location.origin}/wp-json/uec-theme/api/blogs?language=${Language === 'en' ? 'ar' : 'en'}`);
-	const Blogs_HTML = await Response.text ();
-	document.getElementsByClassName ('Blog_Cards') [0].innerHTML = Blogs_HTML;
+	Reload_Blogs (Language);
 }
 
 const Scroll_to_Contact_Us_Section = () => 	window.scrollTo ({ top: document.getElementsByClassName ('Contact_Us_Section') [0].offsetTop, behavior: "smooth" });
@@ -377,19 +374,13 @@ window.addEventListener ('click', Event =>
 	}
 });
 
-const Send_Email = async () =>
+window.addEventListener ('touchstart', Event =>
 {
-	const Request = new FormData ();
-	Request.append ('action', 'Send_Email');
-	Request.append ('Name', document.getElementsByClassName ('Input_Field') [0].value);
-	Request.append ('Email', document.getElementsByClassName ('Input_Field') [1].value);
-	Request.append ('Subject', `Request for ${document.querySelector ('.Selection_Controller:checked').value}`);
-	Request.append ('Message', document.getElementsByClassName ('Input_Field') [2].value);
-	const Response = await fetch (`${window.location.origin}/wp-admin/admin-ajax.php`, { method: 'POST', body: Request });
-	const Response_Body = await Response.json ();
-	console.log (Response);
-	console.log (Response_Body); 
-}
+	if (Event.target !== document.querySelector ('.Dropdown_Menu_Controller'))
+	{
+		Close_Dropdown_Menu ();
+	}
+});
 
 const Launch_Interaction_Observer = () =>
 {

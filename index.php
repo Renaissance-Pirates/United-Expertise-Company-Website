@@ -287,7 +287,7 @@
 		<form class="Contact_Us_Form">
 			<div class="Input_Field_Container">
 				<input class="Input_Field" id="Placeholder_1" placeholder="Name" />
-				<label class="Input_Label Background_Color_1" for="Placeholder_1" id="Label_1">Name</label>
+				<label class="Input_Label Background_Color_1 Left_1rem" for="Placeholder_1" id="Label_1">Name</label>
 			</div>
 			<div class="Input_Field_Container">
 				<input class="Input_Field" id="Placeholder_2" placeholder="Email" />
@@ -327,7 +327,7 @@
 				<label class="Input_Label Background_Color_1 Left_1rem" for="Placeholder_4" id="Label_4">Message</label>
 			</div>
 		</form>
-		<button class="Standard_Button" id="Call_to_Action_2" onclick="Send_Email ()">Send Message</button>
+		<button class="Standard_Button" id="Call_to_Action_2" onclick="Send_Email (document.documentElement.getAttribute ('lang'))">Send Message</button>
 	</div>
 	<div class="Contact_Us_Response">
 		<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 15C10 11.13 13.13 8 17 8C18.08 8 19.09 8.25 20 8.68V2C20 0.9 19.1 0 18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H10.08C10.03 15.67 10 15.34 10 15ZM2 2L10 7L18 2V4L10 9L2 4V2ZM15.34 18L11.8 14.46L13.21 13.05L15.33 15.17L19.57 10.93L21 12.34L15.34 18Z" fill="black"/></svg>
