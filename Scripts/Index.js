@@ -390,7 +390,7 @@ window.addEventListener ('click', Event =>
 
 window.addEventListener ('touchend', Event =>
 {
-	if (Event.target !== document.querySelector ('.Dropdown_Menu_Controller'))
+	if (![...document.querySelectorAll ('.Dropdown_Menu_Option')].includes (Event.target))
 	{
 		Close_Dropdown_Menu ();
 	}
